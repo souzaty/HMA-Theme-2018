@@ -1,5 +1,5 @@
 <?php
-	/* Template Name: CORPO CLINICO HEELJ */
+	/* Template Name: CORPO CLINICO */
 ?>
 <div id="pagina-interna-heelj">
 	<?php get_header(); ?>

@@ -32,7 +32,7 @@ require_once('wp_bootstrap_pagination.php');
 function themename_custom_logo_setup() {
 $defaults = array(
     'height'      => 90,
-    'width'       => 160,
+    'width'       => 225,
     'flex-height' => true,
     'flex-width'  => true,
     'header-text' => array( 'site-title', 'site-description' ),
@@ -50,7 +50,7 @@ add_filter('jpeg_quality', create_function('', 'return 100;'));
 set_post_thumbnail_size(825, 510, true);
 add_image_size('membros-conselho', 283, 250, true);
 add_image_size('unidades', 110, 56, true);
-add_image_size('servicos-heelj', 80, 80, true);
+add_image_size('servicos', 80, 80, true);
 add_image_size('noticias-home-heelj', 366, 232, true);
 add_image_size('corpo-clinico', 115, 115, true);
 
@@ -370,13 +370,13 @@ function login_styles() { ?>
      background: #009ee4 !important;
  }
  .login h1 a {
-     background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/heelj-logo-login.svg') !important;
-     background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/heelj-logo-login.svg') !important;
+     background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/hma-logo-login.svg') !important;
+     background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/img/hma-logo-login.svg') !important;
      background-size: 100% !important;
      background-position: center center !important;
      background-repeat: no-repeat;
      height: 90px !important;
-     width: 320px !important;
+     width: 230px !important;
  }
  .login #backtoblog a,
  .login #nav a {
@@ -395,7 +395,7 @@ add_filter( 'login_headerurl', 'my_login_logo_url' );
 
 /***** Change Alt Attribute *****/
 function my_login_logo_url_title() {
-    return 'HEELJ - Hospital Estadual Ernestina Lopes Jaime.';
+    return 'HMA - Hospital Municipal de Araguaína.';
 }
 add_filter( 'login_headertitle', 'my_login_logo_url_title' );
 // End Customize wp-login Page
