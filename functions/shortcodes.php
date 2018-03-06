@@ -6,14 +6,14 @@
  */
 
  // Start Shortcode Notícias Home
-function noticias_home_heelj_short($atts) { ob_start(); ?>
+function noticias_home_hma_short($atts) { ob_start(); ?>
 <section id="noticias">
 	<div class="container">
 		<div class="row">
 			<?php
 				global $post;
 				$wp_query = new WP_Query();
-				$wp_query->query('post_type=post&cat=heelj&posts_per_page=3&orderby=date&order=DESC');
+				$wp_query->query('post_type=post&cat=hma&posts_per_page=3&orderby=date&order=DESC');
 				$count = 0;
 			?>
 			<?php
@@ -45,7 +45,7 @@ function noticias_home_heelj_short($atts) { ob_start(); ?>
 		ob_end_clean();
 		return $content;
 }
-add_shortcode('noticias_home_heelj', 'noticias_home_heelj_short');
+add_shortcode('noticias_home_hma', 'noticias_home_hma_short');
 // End Shortcode Notícias Home
 // **
 // **

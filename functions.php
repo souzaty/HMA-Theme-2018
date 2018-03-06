@@ -220,20 +220,20 @@ function indicador_hma()
 add_action('save_post_indicadores-ibgh', 'save_details_post_indicadores_ibgh');
 function save_details_post_indicadores_ibgh() {
 	global $post;
-	update_post_meta($post->ID, "label_indicador_heelj_1", $_POST["label_indicador_heelj_1"]);
-	update_post_meta($post->ID, "value_indicador_heelj_1", $_POST["value_indicador_heelj_1"]);
-	update_post_meta($post->ID, "label_indicador_heelj_2", $_POST["label_indicador_heelj_2"]);
-	update_post_meta($post->ID, "value_indicador_heelj_2", $_POST["value_indicador_heelj_2"]);
-	update_post_meta($post->ID, "label_indicador_heelj_3", $_POST["label_indicador_heelj_3"]);
-	update_post_meta($post->ID, "value_indicador_heelj_3", $_POST["value_indicador_heelj_3"]);
-	update_post_meta($post->ID, "label_indicador_heelj_4", $_POST["label_indicador_heelj_4"]);
-	update_post_meta($post->ID, "value_indicador_heelj_4", $_POST["value_indicador_heelj_4"]);
-	update_post_meta($post->ID, "label_indicador_heelj_5", $_POST["label_indicador_heelj_5"]);
-	update_post_meta($post->ID, "value_indicador_heelj_5", $_POST["value_indicador_heelj_5"]);
-	update_post_meta($post->ID, "label_indicador_heelj_6", $_POST["label_indicador_heelj_6"]);
-	update_post_meta($post->ID, "value_indicador_heelj_6", $_POST["value_indicador_heelj_6"]);
-	update_post_meta($post->ID, "data_acumulado_heelj", $_POST["data_acumulado_heelj"]);
-	update_post_meta($post->ID, "frase_heelj", $_POST["frase_heelj"]);
+    update_post_meta($post->ID, "label_indicador_hma_1", $_POST["label_indicador_hma_1"]);
+	update_post_meta($post->ID, "value_indicador_hma_1", $_POST["value_indicador_hma_1"]);
+	update_post_meta($post->ID, "label_indicador_hma_2", $_POST["label_indicador_hma_2"]);
+	update_post_meta($post->ID, "value_indicador_hma_2", $_POST["value_indicador_hma_2"]);
+	update_post_meta($post->ID, "label_indicador_hma_3", $_POST["label_indicador_hma_3"]);
+	update_post_meta($post->ID, "value_indicador_hma_3", $_POST["value_indicador_hma_3"]);
+	update_post_meta($post->ID, "label_indicador_hma_4", $_POST["label_indicador_hma_4"]);
+	update_post_meta($post->ID, "value_indicador_hma_4", $_POST["value_indicador_hma_4"]);
+	update_post_meta($post->ID, "label_indicador_hma_5", $_POST["label_indicador_hma_5"]);
+	update_post_meta($post->ID, "value_indicador_hma_5", $_POST["value_indicador_hma_5"]);
+	update_post_meta($post->ID, "label_indicador_hma_6", $_POST["label_indicador_hma_6"]);
+	update_post_meta($post->ID, "value_indicador_hma_6", $_POST["value_indicador_hma_6"]);
+	update_post_meta($post->ID, "data_acumulado_hma", $_POST["data_acumulado_hma"]);
+	update_post_meta($post->ID, "frase_hma", $_POST["frase_hma"]);
 }
 // End CPT Indicadores
 
