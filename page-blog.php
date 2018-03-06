@@ -27,7 +27,7 @@
                global $post;
                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                $wp_query = new WP_Query();
-               $wp_query->query('post_type=post&cat=2&orderby=date&order=DESC&posts_per_page=4&paged=' . $paged);
+               $wp_query->query('post_type=post&cat=HMA&orderby=date&order=DESC&posts_per_page=4&paged=' . $paged);
                 ?>
             <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post();?>
             <div class="postResume">
