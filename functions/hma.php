@@ -1,8 +1,8 @@
 <?php
-/** HEELJ Theme Functions
+/** HMA Theme Functions
  * @package WordPress
- * @subpackage HEELJ
- * @since HEELJ 1.0 Beta
+ * @subpackage HMA
+ * @since HMA
  */
 
 add_filter('wp_nav_menu_items', 'add_search_box_to_menu_heelj', 10, 2);

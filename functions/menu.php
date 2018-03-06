@@ -1,8 +1,8 @@
 <?php
 /** Register Theme Menus
  * @package WordPress
- * @subpackage HEELJ
- * @since HEELJ 1.0 Beta
+ * @subpackage HMA
+ * @since HMA
  */
 
 register_nav_menus(array(
