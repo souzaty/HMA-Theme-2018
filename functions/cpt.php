@@ -81,8 +81,8 @@
  add_action('init', 'servicos_heelj');
  function servicos_heelj() {
  	$labels = array(
- 		'name' => __('Serviços HEELJ', 'Tipo de post para incluir os serviços do HEELJ.'),
- 		'singular_name' => __('serviços HEELJ', 'post type singular name'),
+ 		'name' => __('Serviços', 'Tipo de post para incluir os serviços.'),
+ 		'singular_name' => __('serviços', 'post type singular name'),
  		'all_items' => __('Todos os serviços'),
  		'add_new' => _x('Novo serviço', 'Novo serviço'),
  		'add_new_item' => __('Add novo serviço'),

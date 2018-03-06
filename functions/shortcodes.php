@@ -338,200 +338,224 @@ add_shortcode('pesquisa_sidebar', 'pesquisa_sidebar_');
 // **
 // **
 // Start Shortcode Indicadores
-function indicadores_heelj_short($atts) {
-	ob_start();
+function indicadores_hma_short($atts)
+{
+				ob_start();
 ?>
-<section id="numeros-hospital">
-	<div class="container gutter-0">
-		<div class="row">
-			<?php
+						<section id="numeros-hospital" class="ghost">
+					      <div class="container gutter-0">
+					         <div class="row">
+					         <?php
 				global $post;
 				$wp_query = new WP_Query();
 				$wp_query->query('post_type=indicadores-ibgh&posts_per_page=1&orderby=title&order=ASC');
 				$count = 0;
-			?>
-			<?php
+?>
+									 	<?php
 				if ($wp_query->have_posts()):
-					while ($wp_query->have_posts()):
-					$wp_query->the_post();
-			?>
-			<div class="col-md-6"></div>
-			<div class="col-md-6">
-			<p style="font-style: italic; font-size: 1.2em;">Nossos n&uacute;meros</p>
-				<h2><?php $frase_heelj = get_post_meta($post->ID, 'frase_heelj', true);
-					?>
-					<?php echo $frase_heelj;
-					?>
-				</h2>
-			</div>
-		</div>
-		<div class="row counter-area" style="padding-top: 20px;">
-			<div class="col-md-6"></div>
-				<!-- leitos -->
-				<div class="col-md-2 margin-right margin-bottom bloco-indicadores">
-					<div class="col-md-4">
-						<p class="right"><img src="<?php echo esc_url(get_template_directory_uri());
-		                  	?>/img/icon_001.png" alt=""></p>
-		            </div>
-		            <div class="col-md-8 gutter-0">
-						<h1 class="number-counter">
-						<?php $value_indicador_heelj_1 = get_post_meta($post->ID, 'value_indicador_heelj_1', true); ?>
-							<?php echo $value_indicador_heelj_1; ?>
-						</h1>
-						<p class="text-counter">
-							<?php $label_indicador_heelj_1 = get_post_meta($post->ID, 'label_indicador_heelj_1', true); ?>
-							<?php echo $label_indicador_heelj_1; ?>
-						</p>
-					</div>
-		            </div>
-		            <!-- Centros cirurgicos -->
-		            <div class="col-md-2 margin-right margin-bottom bloco-indicadores">
-		               <div class="col-md-4">
-		               		<p class="right"><img src="<?php echo esc_url(get_template_directory_uri());
-		               			?>/img/icon_002.png" alt=""></p>
-		               </div>
-		               <div class="col-md-8">
-		                  <h1 class="number-counter">
-		                    <?php $value_indicador_heelj_2 = get_post_meta($post->ID, 'value_indicador_heelj_2', true); ?>
-		               		<?php echo $value_indicador_heelj_2; ?>
-		               	  </h1>
-		                  <p class="text-counter">
-		                    <?php $label_indicador_heelj_2 = get_post_meta($post->ID, 'label_indicador_heelj_2', true); ?>
-		               		<?php echo $label_indicador_heelj_2; ?>
-		                  </p>
-		               </div>
-		            </div>
-		            <!-- Centros colaboradores -->
-		            <div class="col-md-2 margin-bottom bloco-indicadores">
-		               <div class="col-md-4">
-		                  <p class="right"><img src="<?php echo esc_url(get_template_directory_uri());
-		                  	?>/img/icon_003.png" alt=""></p>
-		               </div>
-		               <div class="col-md-8">
-		                  <h1 class="number-counter">
-		                  	<?php $value_indicador_heelj_3 = get_post_meta($post->ID, 'value_indicador_heelj_3', true);
+								while ($wp_query->have_posts()):
+												$wp_query->the_post();
 ?>
-		               		<?php
-												echo $value_indicador_heelj_3;
+					            <div class="col-md-6"></div>
+					            <div class="col-md-6">
+					             <p style="font-style: italic; font-size: 1.2em;">Nossos n&uacute;meros</p>
+					               <h2>
+					               		<?php
+												$frase_hma = get_post_meta($post->ID, 'frase_hma', true);
 ?>
-		                  </h1>
-		                  <p class="text-counter">
-		                  	<?php
-												$label_indicador_heelj_3 = get_post_meta($post->ID, 'label_indicador_heelj_3', true);
+					               		<?php
+												echo $frase_hma;
 ?>
-		               		<?php
-												echo $label_indicador_heelj_3;
+					               </h2>
+					            </div>
+					         </div>
+					         <div class="row counter-area" style="padding-top: 20px;">
+					            <div class="col-md-6"></div>
+					            <!-- leitos -->
+					            <div class="col-md-2 margin-right margin-bottom bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
+												echo esc_url(get_template_directory_uri());
+?>/img/icon_001.png" alt=""></p>
+					               </div>
+					               <div class="col-md-8 gutter-0">
+					                  <h1 class="number-counter">
+					                    <?php
+												$value_indicador_hma_1 = get_post_meta($post->ID, 'value_indicador_hma_1', true);
 ?>
-		                  </p>
-		               </div>
-		            </div>
-		         </div>
-		         <div class="row counter-area">
-		            <div class="col-md-6"></div>
-		            <!-- procedimentos -->
-		            <div class="col-md-2 margin-right bloco-indicadores">
-		               <div class="col-md-4">
-		                  <p class="right"><img src="<?php
+					               		<?php
+												echo $value_indicador_hma_1;
+?>
+					                  </h1>
+					                  <p class="text-counter">
+					                  	<?php
+												$label_indicador_hma_1 = get_post_meta($post->ID, 'label_indicador_hma_1', true);
+?>
+					               		<?php
+												echo $label_indicador_hma_1;
+?>
+					                  </p>
+					               </div>
+					            </div>
+					            <!-- Centros cirurgicos -->
+					            <div class="col-md-2 margin-right margin-bottom bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
+												echo esc_url(get_template_directory_uri());
+?>/img/icon_002.png" alt=""></p>
+					               </div>
+					               <div class="col-md-8">
+					                  <h1 class="number-counter">
+					                    <?php
+												$value_indicador_hma_2 = get_post_meta($post->ID, 'value_indicador_hma_2', true);
+?>
+					               		<?php
+												echo $value_indicador_hma_2;
+?>
+					               	  </h1>
+					                  <p class="text-counter">
+					                    <?php
+												$label_indicador_hma_2 = get_post_meta($post->ID, 'label_indicador_hma_2', true);
+?>
+					               		<?php
+												echo $label_indicador_hma_2;
+?>
+					                  </p>
+					               </div>
+					            </div>
+					            <!-- Centros colaboradores -->
+					            <div class="col-md-2 margin-bottom bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
+												echo esc_url(get_template_directory_uri());
+?>/img/icon_003.png" alt=""></p>
+					               </div>
+					               <div class="col-md-8">
+					                  <h1 class="number-counter">
+					                  	<?php
+												$value_indicador_hma_3 = get_post_meta($post->ID, 'value_indicador_hma_3', true);
+?>
+					               		<?php
+												echo $value_indicador_hma_3;
+?>
+					                  </h1>
+					                  <p class="text-counter">
+					                  	<?php
+												$label_indicador_hma_3 = get_post_meta($post->ID, 'label_indicador_hma_3', true);
+?>
+					               		<?php
+												echo $label_indicador_hma_3;
+?>
+					                  </p>
+					               </div>
+					            </div>
+					         </div>
+					         <div class="row counter-area">
+					            <div class="col-md-6"></div>
+					            <!-- procedimentos -->
+					            <div class="col-md-2 margin-right bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
 												echo esc_url(get_template_directory_uri());
 ?>/img/icon_004.png" alt=""></p>
-		               </div>
-		               <div class="col-md-8">
-		                  <h1 class="number-counter">
-		                  	<?php
-												$value_indicador_heelj_4 = get_post_meta($post->ID, 'value_indicador_heelj_4', true);
+					               </div>
+					               <div class="col-md-8">
+					                  <h1 class="number-counter">
+					                  	<?php
+												$value_indicador_hma_4 = get_post_meta($post->ID, 'value_indicador_hma_4', true);
 ?>
-		               		<?php
-												echo $value_indicador_heelj_4;
+					               		<?php
+												echo $value_indicador_hma_4;
 ?>
-		                  </h1>
-		                  <p class="text-counter">
-		                  	<?php
-												$label_indicador_heelj_4 = get_post_meta($post->ID, 'label_indicador_heelj_4', true);
+					                  </h1>
+					                  <p class="text-counter">
+					                  	<?php
+												$label_indicador_hma_4 = get_post_meta($post->ID, 'label_indicador_hma_4', true);
 ?>
-		               		<?php
-												echo $label_indicador_heelj_4;
+					               		<?php
+												echo $label_indicador_hma_4;
 ?>
-		                  </p>
-		               </div>
-		            </div>
-		            <!-- especialidades -->
-		            <div class="col-md-2 margin-right bloco-indicadores">
-		               <div class="col-md-4">
-		                  <p class="right"><img src="<?php
+					                  </p>
+					               </div>
+					            </div>
+					            <!-- especialidades -->
+					            <div class="col-md-2 margin-right bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
 												echo esc_url(get_template_directory_uri());
 ?>/img/icon_005.png" alt=""></p>
-		               </div>
-		               <div class="col-md-8">
-		                  <h1 class="number-counter">
-		                  	<?php
-												$value_indicador_heelj_5 = get_post_meta($post->ID, 'value_indicador_heelj_5', true);
+					               </div>
+					               <div class="col-md-8">
+					                  <h1 class="number-counter">
+					                  	<?php
+												$value_indicador_hma_5 = get_post_meta($post->ID, 'value_indicador_hma_5', true);
 ?>
-		               		<?php
-												echo $value_indicador_heelj_5;
+					               		<?php
+												echo $value_indicador_hma_5;
 ?>
-		               	  </h1>
-		                  <p class="text-counter">
-		                  	<?php
-												$label_indicador_heelj_5 = get_post_meta($post->ID, 'label_indicador_heelj_5', true);
+					               	  </h1>
+					                  <p class="text-counter">
+					                  	<?php
+												$label_indicador_hma_5 = get_post_meta($post->ID, 'label_indicador_hma_5', true);
 ?>
-		               		<?php
-												echo $label_indicador_heelj_5;
+					               		<?php
+												echo $label_indicador_hma_5;
 ?>
-		                  </p>
-		               </div>
-		            </div>
-		            <!-- horario -->
-		            <div class="col-md-2 bloco-indicadores">
-		               <div class="col-md-4">
-		                  <p class="right"><img src="<?php
+					                  </p>
+					               </div>
+					            </div>
+					            <!-- horario -->
+					            <div class="col-md-2 bloco-indicadores">
+					               <div class="col-md-4">
+					                  <p class="right"><img src="<?php
 												echo esc_url(get_template_directory_uri());
 ?>/img/icon_006.png" alt=""></p>
-		               </div>
-		               <div class="col-md-8">
-		                  <h1 class="number-counter">
-		                    <?php
-												$value_indicador_heelj_6 = get_post_meta($post->ID, 'value_indicador_heelj_6', true);
+					               </div>
+					               <div class="col-md-8">
+					                  <h1 class="number-counter">
+					                    <?php
+												$value_indicador_hma_6 = get_post_meta($post->ID, 'value_indicador_hma_6', true);
 ?>
-		               		<?php
-												echo $value_indicador_heelj_6;
+					               		<?php
+												echo $value_indicador_hma_6;
 ?>
-		                  </h1>
-		                  <p class="text-counter">
-		                    <?php
-												$label_indicador_heelj_6 = get_post_meta($post->ID, 'label_indicador_heelj_6', true);
+					                  </h1>
+					                  <p class="text-counter">
+					                    <?php
+												$label_indicador_hma_6 = get_post_meta($post->ID, 'label_indicador_hma_6', true);
 ?>
-		               		<?php
-												echo $label_indicador_heelj_6;
+					               		<?php
+												echo $label_indicador_hma_6;
 ?>
-		                  </p>
-		               </div>
-		            </div>
-		         </div>
-		         <?php
+					                  </p>
+					               </div>
+					            </div>
+					         </div>
+					         <?php
 								endwhile;
 				endif;
 ?>
-		      </div>
-		      <div class="row" style="padding-bottom: 20px;">
-		         <div class="col-md-6"></div>
-		         <div class="col-md-6">
-		         <?php
-				$data_acumulado_heelj = get_post_meta($post->ID, 'data_acumulado_heelj', true);
+					      </div>
+					      <div class="row" style="padding-bottom: 20px;">
+					         <div class="col-md-6"></div>
+					         <div class="col-md-6">
+					         <?php
+				$data_acumulado_hma = get_post_meta($post->ID, 'data_acumulado_hma', true);
 ?>
 
-		            <p style="font-style: italic; font-size: 1em;"><span class="glyphicon glyphicon-info-sign"></span> O n&uacute;mero de procedimentos realizados &eacute; o valor acumulado desde <?php
-				echo $data_acumulado_heelj;
+					            <p style="font-style: italic; font-size: 1em;"><span class="glyphicon glyphicon-info-sign"></span> O n&uacute;mero de procedimentos realizados &eacute; o valor acumulado desde <?php
+				echo $data_acumulado_hma;
 ?></p>
-		         </div>
-		      </div>
-		   </section>
+					         </div>
+					      </div>
+					   </section>
 
-			<?php
+						<?php
 				$content = ob_get_contents();
 				ob_end_clean();
 				return $content;
-			}
-add_shortcode('indicadores_heelj', 'indicadores_heelj_short');
+}
+add_shortcode('indicadores_hma', 'indicadores_hma_short');
 // End Shortcode Indicadores
 // **
 // **

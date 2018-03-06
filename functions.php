@@ -145,77 +145,77 @@ function indicadores_ibgh() {
 }
 add_action("admin_init", "campos_personalizados_indicadores_ibgh");
 function campos_personalizados_indicadores_ibgh() {
-	add_meta_box("indicador_heelj", "Indicadores HEELJ", "indicador_heelj", "indicadores-ibgh", "normal", "low");
+	add_meta_box("indicador_hma", "Indicadores HMA", "indicador_hma", "indicadores-ibgh", "normal", "low");
 }
-function indicador_heelj() {
+function indicador_hma()
+{
 	global $post;
-	$custom                  = get_post_meta($post->ID);
-	$label_indicador_heelj_1 = $custom["label_indicador_heelj_1"][0];
-	$value_indicador_heelj_1 = $custom["value_indicador_heelj_1"][0];
-	$label_indicador_heelj_2 = $custom["label_indicador_heelj_2"][0];
-	$value_indicador_heelj_2 = $custom["value_indicador_heelj_2"][0];
-	$label_indicador_heelj_3 = $custom["label_indicador_heelj_3"][0];
-	$value_indicador_heelj_3 = $custom["value_indicador_heelj_3"][0];
-	$label_indicador_heelj_4 = $custom["label_indicador_heelj_4"][0];
-	$value_indicador_heelj_4 = $custom["value_indicador_heelj_4"][0];
-	$label_indicador_heelj_5 = $custom["label_indicador_heelj_5"][0];
-	$value_indicador_heelj_5 = $custom["value_indicador_heelj_5"][0];
-	$label_indicador_heelj_6 = $custom["label_indicador_heelj_6"][0];
-	$value_indicador_heelj_6 = $custom["value_indicador_heelj_6"][0];
-	$data_acumulado_heelj    = $custom["data_acumulado_heelj"][0];
-	$frase_heelj             = $custom["frase_heelj"][0];
+	$custom                = get_post_meta($post->ID);
+	$label_indicador_hma_1 = $custom["label_indicador_hma_1"][0];
+	$value_indicador_hma_1 = $custom["value_indicador_hma_1"][0];
+	$label_indicador_hma_2 = $custom["label_indicador_hma_2"][0];
+	$value_indicador_hma_2 = $custom["value_indicador_hma_2"][0];
+	$label_indicador_hma_3 = $custom["label_indicador_hma_3"][0];
+	$value_indicador_hma_3 = $custom["value_indicador_hma_3"][0];
+	$label_indicador_hma_4 = $custom["label_indicador_hma_4"][0];
+	$value_indicador_hma_4 = $custom["value_indicador_hma_4"][0];
+	$label_indicador_hma_5 = $custom["label_indicador_hma_5"][0];
+	$value_indicador_hma_5 = $custom["value_indicador_hma_5"][0];
+	$label_indicador_hma_6 = $custom["label_indicador_hma_6"][0];
+	$value_indicador_hma_6 = $custom["value_indicador_hma_6"][0];
+	$data_acumulado_hma    = $custom["data_acumulado_hma"][0];
+	$frase_hma             = $custom["frase_hma"][0];
 ?>
-
-	<label>Informe o label HEELJ 1</label>
-	<input type="text" name="label_indicador_heelj_1" value="<?php echo $label_indicador_heelj_1;
+	<label>Informe o label HMA 1</label>
+	<input type="text" name="label_indicador_hma_1" value="<?php echo $label_indicador_hma_1;
 ?>" />
-	<label>Informe o conteúdo HEELJ 1</label>
-	<input type="text" name="value_indicador_heelj_1" value="<?php echo $value_indicador_heelj_1;
-?>" />
-	<br />
-	<label>Informe o label HEELJ 2</label>
-	<input type="text" name="label_indicador_heelj_2" value="<?php echo $label_indicador_heelj_2;
-?>" />
-	<label>Informe o conteúdo HEELJ 2</label>
-	<input type="text" name="value_indicador_heelj_2" value="<?php echo $value_indicador_heelj_2;
+	<label>Informe o conteúdo HMA 1</label>
+	<input type="text" name="value_indicador_hma_1" value="<?php echo $value_indicador_hma_1;
 ?>" />
 	<br />
-	<label>Informe o label HEELJ 3</label>
-	<input type="text" name="label_indicador_heelj_3" value="<?php echo $label_indicador_heelj_3;
+	<label>Informe o label HMA 2</label>
+	<input type="text" name="label_indicador_hma_2" value="<?php echo $label_indicador_hma_2;
 ?>" />
-	<label>Informe o conteúdo HEELJ 3</label>
-	<input type="text" name="value_indicador_heelj_3" value="<?php echo $value_indicador_heelj_3;
-?>" />
-	<br />
-	<label>Informe o label HEELJ 4</label>
-	<input type="text" name="label_indicador_heelj_4" value="<?php echo $label_indicador_heelj_4;
-?>" />
-	<label>Informe o conteúdo HEELJ 4</label>
-	<input type="text" name="value_indicador_heelj_4" value="<?php echo $value_indicador_heelj_4;
+	<label>Informe o conteúdo HMA 2</label>
+	<input type="text" name="value_indicador_hma_2" value="<?php echo $value_indicador_hma_2;
 ?>" />
 	<br />
-	<label>Informe o label HEELJ 5</label>
-	<input type="text" name="label_indicador_heelj_5" value="<?php echo $label_indicador_heelj_5;
+	<label>Informe o label HMA 3</label>
+	<input type="text" name="label_indicador_hma_3" value="<?php echo $label_indicador_hma_3;
 ?>" />
-	<label>Informe o conteúdo HEELJ 5</label>
-	<input type="text" name="value_indicador_heelj_5" value="<?php echo $value_indicador_heelj_5;
+	<label>Informe o conteúdo HMA 3</label>
+	<input type="text" name="value_indicador_hma_3" value="<?php echo $value_indicador_hma_3;
 ?>" />
 	<br />
-	<label>Informe o label HEELJ 6</label>
-	<input type="text" name="label_indicador_heelj_6" value="<?php echo $label_indicador_heelj_6;
+	<label>Informe o label HMA 4</label>
+	<input type="text" name="label_indicador_hma_4" value="<?php echo $label_indicador_hma_4;
 ?>" />
-	<label>Informe o conteúdo HEELJ 6</label>
-	<input type="text" name="value_indicador_heelj_6" value="<?php echo $value_indicador_heelj_6;
+	<label>Informe o conteúdo HMA 4</label>
+	<input type="text" name="value_indicador_hma_4" value="<?php echo $value_indicador_hma_4;
+?>" />
+	<br />
+	<label>Informe o label HMA 5</label>
+	<input type="text" name="label_indicador_hma_5" value="<?php echo $label_indicador_hma_5;
+?>" />
+	<label>Informe o conteúdo HMA 5</label>
+	<input type="text" name="value_indicador_hma_5" value="<?php echo $value_indicador_hma_5;
+?>" />
+	<br />
+	<label>Informe o label HMA 6</label>
+	<input type="text" name="label_indicador_hma_6" value="<?php echo $label_indicador_hma_6;
+?>" />
+	<label>Informe o conteúdo HMA 6</label>
+	<input type="text" name="value_indicador_hma_6" value="<?php echo $value_indicador_hma_6;
 ?>" />
 	<br /><br />
 	<label>Informe o período acumulado</label>
-	<input type="text" name="data_acumulado_heelj" value="<?php echo $data_acumulado_heelj;
+	<input type="text" name="data_acumulado_hma" value="<?php echo $data_acumulado_hma;
 ?>" />
 	<br />
 	<label>Informe o frase principal</label>
-	<input type="text" name="frase_heelj" value="<?php echo $frase_heelj;
+	<input type="text" name="frase_hma" value="<?php echo $frase_hma;
 ?>" />
-					<?php
+	<?php
 }
 add_action('save_post_indicadores-ibgh', 'save_details_post_indicadores_ibgh');
 function save_details_post_indicadores_ibgh() {
