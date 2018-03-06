@@ -6,74 +6,79 @@
  */
 
  // Start CPT Corpo Clínico
- add_action('init', 'corpo_clinico_heelj_register');
- function corpo_clinico_heelj_register() {
- 	$labels = array(
- 		'name' => __('Corpo Cl&iacute;nico', 'Tipo de post para incluir os profissionais do hospital.'),
- 		'singular_name' => __('Corpo Cl&iacute;nico', 'post type singular name'),
- 		'all_items' => __('Todos profissionais'),
- 		'add_new' => _x('Novo profissional', 'Novo profissional'),
- 		'add_new_item' => __('Add novo item'),
- 		'edit_item' => __('Editar profissional'),
- 		'new_item' => __('Novo profissional Item'),
- 		'view_item' => __('Ver item do profissional'),
- 		'search_items' => __('Procurar profissional'),
- 		'not_found' => __('Nenhum profissional encontrado'),
- 		'not_found_in_trash' => __('Nenhum profissional encontrado na lixeira'),
- 		'parent_item_colon' => ''
- 	);
- 	$args   = array(
- 		'labels' => $labels,
- 		'public' => true,
- 		'publicly_queryable' => true,
- 		'show_ui' => true,
- 		'query_var' => true,
- 		'menu_icon' => 'dashicons-admin-users',
- 		'capability_type' => 'post',
- 		'hierarchical' => false,
- 		'menu_position' => 6,
- 		'taxonomies' => array(
- 			'post_tag'
- 			),
- 		'supports' => array(
- 			'title',
- 			'thumbnail',
- 			'tags'
- 			)
- 	);
- register_post_type('corpo_clinico_heelj', $args);
- 	flush_rewrite_rules();
+ add_action('init', 'corpo_clinico_hma_register');
+ function corpo_clinico_hma_register()
+ {
+ 				$labels = array(
+ 								'name' => __('Corpo Cl&iacute;nico HMA', 'Tipo de post para incluir os profissionais do HMA.'),
+ 								'singular_name' => __('Corpo Cl&iacute;nico', 'post type singular name'),
+ 								'all_items' => __('Todos profissionais'),
+ 								'add_new' => _x('Novo profissional', 'Novo profissional'),
+ 								'add_new_item' => __('Add novo item'),
+ 								'edit_item' => __('Editar profissional'),
+ 								'new_item' => __('Novo profissional Item'),
+ 								'view_item' => __('Ver item do profissional'),
+ 								'search_items' => __('Procurar profissional'),
+ 								'not_found' => __('Nenhum profissional encontrado'),
+ 								'not_found_in_trash' => __('Nenhum profissional encontrado na lixeira'),
+ 								'parent_item_colon' => ''
+ 				);
+ 				$args   = array(
+ 								'labels' => $labels,
+ 								'public' => true,
+ 								'publicly_queryable' => true,
+ 								'show_ui' => true,
+ 								'query_var' => true,
+ 								'menu_icon' => 'dashicons-admin-users',
+ 								'capability_type' => 'post',
+ 								'hierarchical' => false,
+ 								'menu_position' => 6,
+ 								'taxonomies' => array(
+ 												'post_tag'
+ 								),
+ 								'supports' => array(
+ 												'title',
+ 												'thumbnail',
+ 												'tags'
+ 								)
+ 				);
+ 				register_post_type('corpo_clinico_hma', $args);
+ 				flush_rewrite_rules();
  }
- register_taxonomy("Especialidades", array(
- 	"corpo_clinico_heelj"
- 	), array(
- 	"hierarchical" => true,
- 	"label" => "Especialidades",
- 	"singular_label" => "edital",
- 	"rewrite" => array(
- 		'slug' => 'edital'
- 		),
- 	"public" => true,
- 	"show_ui" => true,
- 	"_builtin" => true
- 	));
- add_action("admin_init", "campos_personalizados_corpo_clinico_heelj");
- function campos_personalizados_corpo_clinico_heelj() {
- 	add_meta_box("corpo_crm", "Informe o CRM", "corpo_crm", "corpo_clinico_heelj", "normal", "low");
+ register_taxonomy("Especialidades HMA", array(
+ 				"corpo_clinico_hma"
+ ), array(
+ 				"hierarchical" => true,
+ 				"label" => "Especialidades HMA",
+ 				"singular_label" => "especialidade",
+ 				"rewrite" => array(
+ 								'slug' => 'especialidade'
+ 				),
+ 				"public" => true,
+ 				"show_ui" => true,
+ 				"_builtin" => true
+ ));
+ add_action("admin_init", "campos_personalizados_corpo_clinico_hma");
+ function campos_personalizados_corpo_clinico_hma()
+ {
+ 				add_meta_box("corpo_crm_hma", "Informe o CRM", "corpo_crm_hma", "corpo_clinico_hma", "normal", "low");
  }
- function corpo_crm() {
- 	global $post;
- 	$custom    = get_post_meta($post->ID);
- 	$corpo_crm = $custom["corpo_crm"][0];
+ function corpo_crm_hma()
+ {
+ 				global $post;
+ 				$custom        = get_post_meta($post->ID);
+ 				$corpo_crm_hma = $custom["corpo_crm_hma"][0];
  ?>
- 	<input type="text" name="corpo_crm" value='<?php echo $corpo_crm;
- 	?>' /></p>
+   <input type="text" name="corpo_crm_hma" value='<?php
+ 				echo $corpo_crm_hma;
+ ?>' /></p>
  <?php
  }
- add_action('save_post_corpo_clinico_heelj', 'save_details_post_corpo_clinico_heelj');
- function save_details_post_corpo_clinico_heelj() {
- 	global $post;
- 	update_post_meta($post->ID, "corpo_crm", $_POST["corpo_crm"]);
+ add_action('save_post_corpo_clinico_hma', 'save_details_post_corpo_clinico_hma');
+ function save_details_post_corpo_clinico_hma()
+ {
+ 				global $post;
+ 				update_post_meta($post->ID, "corpo_crm_hma", $_POST["corpo_crm_hma"]);
  }
  // End CPT Corpo Clínico
 

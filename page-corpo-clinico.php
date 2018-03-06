@@ -43,7 +43,7 @@
 			<?php
 				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$wp_query = new WP_Query();
-				$wp_query->query('post_type=corpo_clinico_heelj&posts_per_page=-1&paged=' . $paged);
+				$wp_query->query('post_type=corpo_clinico_hma&posts_per_page=-1&paged=' . $paged);
 				?>
 			<?php if ($wp_query->have_posts()) : ?>
 			<?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
