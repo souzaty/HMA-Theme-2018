@@ -1,2 +1,2 @@
-# HEELJ-Theme-2018
-Wordpress Theme for hospital Estadual Ernestina Lopes Jaime
+# HMA-Theme-2018
+Wordpress Theme for Hospital Municipal de Araguaína

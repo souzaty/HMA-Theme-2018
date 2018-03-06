@@ -1,8 +1,8 @@
 <?php
 	/**
 	 * @package WordPress
-	 * @subpackage HEELJ
-	 * @since HEELJ 1.0 Beta
+	 * @subpackage HMA
+	 * @since HMA 1.0 Beta
 	*/
 	?>
 <!DOCTYPE html>
