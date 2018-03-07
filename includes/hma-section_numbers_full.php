@@ -26,8 +26,8 @@
                 <?php echo $value_indicador_ibgh_1; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_1 = get_post_meta($post->ID, 'label_indicador_ibgh_1', true); ?>
-                <?php echo $label_indicador_ibgh_1; ?>
+                <?php $label_indicador_hma_1 = get_post_meta($post->ID, 'label_indicador_ibgh_1', true); ?>
+                <?php echo $label_indicador_hma_1; ?>
               </p>
             </td>
           </tr>
@@ -46,8 +46,8 @@
                 <?php echo $value_indicador_ibgh_2; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_2 = get_post_meta($post->ID, 'label_indicador_ibgh_2', true); ?>
-                <?php echo $label_indicador_ibgh_2; ?>
+                <?php $label_indicador_hma_2 = get_post_meta($post->ID, 'label_indicador_ibgh_2', true); ?>
+                <?php echo $label_indicador_hma_2; ?>
               </p>
             </td>
           </tr>
@@ -66,8 +66,8 @@
                 <?php echo $value_indicador_ibgh_3; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_3 = get_post_meta($post->ID, 'label_indicador_ibgh_3', true); ?>
-                <?php echo $label_indicador_ibgh_3; ?>
+                <?php $label_indicador_hma_3 = get_post_meta($post->ID, 'label_indicador_ibgh_3', true); ?>
+                <?php echo $label_indicador_hma_3; ?>
               </p>
             </td>
           </tr>
@@ -86,8 +86,8 @@
                 <?php echo $value_indicador_ibgh_4; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_4 = get_post_meta($post->ID, 'label_indicador_ibgh_4', true); ?>
-                <?php echo $label_indicador_ibgh_4; ?>
+                <?php $label_indicador_hma_4 = get_post_meta($post->ID, 'label_indicador_ibgh_4', true); ?>
+                <?php echo $label_indicador_hma_4; ?>
               </p>
             </td>
           </tr>
@@ -106,8 +106,8 @@
                 <?php echo $value_indicador_ibgh_5; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_5 = get_post_meta($post->ID, 'label_indicador_ibgh_5', true); ?>
-                <?php echo $label_indicador_ibgh_5; ?>
+                <?php $label_indicador_hma_5 = get_post_meta($post->ID, 'label_indicador_ibgh_5', true); ?>
+                <?php echo $label_indicador_hma_5; ?>
               </p>
             </td>
           </tr>
@@ -126,8 +126,8 @@
                 <?php echo $value_indicador_ibgh_6; ?>
               </h1>
               <p class="text-counter">
-                <?php $label_indicador_ibgh_6 = get_post_meta($post->ID, 'label_indicador_ibgh_6', true); ?>
-                <?php echo $label_indicador_ibgh_6; ?>
+                <?php $label_indicador_hma_6 = get_post_meta($post->ID, 'label_indicador_ibgh_6', true); ?>
+                <?php echo $label_indicador_hma_6; ?>
               </p>
             </td>
           </tr>

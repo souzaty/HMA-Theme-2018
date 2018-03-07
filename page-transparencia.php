@@ -55,7 +55,7 @@
    <section id="numeros-full" class="ghost">
       <div class="container">
          <div class="row gutter-0">
-            <?php include 'includes/heelj-section_numbers_full.php'; ?>
+            <?php include 'includes/hma-section_numbers_full.php'; ?>
          </div>
       </div>
    </section>
@@ -124,7 +124,7 @@
                                              <div class="tab-pane  active" id="hmabalancetes">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-balancetes&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=balancetes&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -132,7 +132,7 @@
                                              <div class="tab-pane" id="balancos">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-balancos&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=balancos&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -190,7 +190,7 @@
                                              <div class="tab-pane  active" id="hrg">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-relacao-de-gestores&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=relacao-de-gestores&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -198,7 +198,7 @@
                                              <div class="tab-pane" id="processos-seletivos">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-processos-seletivos&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=processos-seletivos&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -206,7 +206,7 @@
                                              <div class="tab-pane" id="ses">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-transferencia-ses&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=transferencia-ses&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -214,7 +214,7 @@
                                              <div class="tab-pane" id="organograma">
                                                 <?php
                                                    $wp_query = new WP_Query();
-                                                   $wp_query->query('post_type=transparencia&tipo-documento=hma-organograma&posts_per_page=100');
+                                                   $wp_query->query('post_type=transparencia&tipo-documento=organograma&posts_per_page=100');
                                                    $count = 0;
                                                    ?>
                                                 <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -277,7 +277,7 @@
                                                 <div class="tab-pane" id="alvaras">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-alvaras&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=alvaras&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -285,7 +285,7 @@
                                                 <div class="tab-pane" id="atas">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-atas&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=atas&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -293,7 +293,7 @@
                                                 <div class="tab-pane" id="comissoes">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-comissoes&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=comissoes&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -303,7 +303,7 @@
                                                 <div class="tab-pane" id="pareceres">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-pareceres&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=pareceres&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -313,7 +313,7 @@
                                                 <div class="tab-pane" id="processo-de-aquisicao">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-processos-de-aquisicao&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=processos-de-aquisicao&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php include 'includes/transparencia-resultado-lista.php'; ?>
@@ -321,7 +321,7 @@
                                                 <div class="tab-pane" id="relatorio-de-atividades">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-relatorios-de-atividades&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=relatorios-de-atividades&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -379,7 +379,7 @@
                                                 <div class="tab-pane  active" id="contratos-de-gestao">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-contrato-de-gestao&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=contrato-de-gestao&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -389,7 +389,7 @@
                                                 <div class="tab-pane" id="resumo-de-contratos">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-resumo-de-contratos&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=resumo-de-contratos&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -399,7 +399,7 @@
                                                 <div class="tab-pane" id="regulamentos">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-regulamento-de-compras&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=regulamento-de-compras&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php
@@ -454,7 +454,7 @@
                                                 <div class="tab-pane  active" id="contratos-de-gestao">
                                                    <?php
                                                       $wp_query = new WP_Query();
-                                                      $wp_query->query('post_type=transparencia&tipo-documento=hma-relatorio-de-resultados&posts_per_page=100');
+                                                      $wp_query->query('post_type=transparencia&tipo-documento=relatorio-de-resultados&posts_per_page=100');
                                                       $count = 0;
                                                       ?>
                                                    <?php

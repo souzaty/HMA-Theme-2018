@@ -20,6 +20,15 @@
 /* Error 404 styles */
 @import "error.css";
 
+#transparencia-hma header {
+    background-image: url(http://ibgh.org.br/wp-content/uploads/revslider/home-heelj/SLIDE-HEELJ.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    background-size: cover;
+    color: white;
+}
+
 .addthis_inline_share_toolbox_dwab.addthis_tool {
     float: left;
     width: 70%;
