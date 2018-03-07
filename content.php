@@ -18,7 +18,7 @@
       <div class="share">
         <p class="share-text" style="color:#333; width:auto; float: left; display:inline-block;">
           Compartilhe:
-          <?php echo do_shortcode('[addthis tool="addthis_inline_share_toolbox_dwab"]') ?>
+          <?php echo do_shortcode('[addthis tool="addthis_inline_share_toolbox_ca92"]') ?>
         </p>
     </div>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
