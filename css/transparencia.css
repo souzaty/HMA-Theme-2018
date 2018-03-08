@@ -5,6 +5,16 @@
 */
 
 /* ===== Tranparencia Styles ===== */
+.form-transparencia .form-control {
+    background: transparent !important;
+    border: 2px solid #fff !important;
+    color: #fff !important;
+}
+
+.form-transparencia .form-control::placeholder {
+    color:#fff !important;
+}
+
 .panel-heading .title-panel.collapsed:after {
 font-family:"FontAwesome";
 content:"\f054";
