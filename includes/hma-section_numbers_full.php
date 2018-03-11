@@ -1,10 +1,9 @@
 <?php
-
 /**
- * @package WordPress
- * @subpackage IBGH
- * @since IBGH 1.3
- */
+* @package WordPress
+* @subpackage HMA
+* @since HMA 1.0
+*/
 
   global $post;
   $wp_query = new WP_Query();

@@ -2,7 +2,7 @@
 /** Register Theme Menus
  * @package WordPress
  * @subpackage HMA
- * @since HMA
+ * @since HMA 1.0
  */
 
 register_nav_menus(array(

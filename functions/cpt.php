@@ -5,6 +5,142 @@
  * @since HMA 1.0
  */
 
+ // Start  CPT Indicadores
+ add_action('init', 'indicadores_ibgh');
+ function indicadores_ibgh() {
+ 	$labels = array(
+ 		'name' => __('Indicadores IBGH', 'Tipo de post para incluir os indicadores.'),
+ 		'singular_name' => __('Indicadores IBGH', 'post type singular name'),
+ 		'all_items' => __('Indicadores'),
+ 		'add_new' => _x('Novo indicador', 'Novo indicador'),
+ 		'add_new_item' => __('Add novo indicador'),
+ 		'edit_item' => __('Editar indicador'),
+ 		'new_item' => __('Novo indicador Item'),
+ 		'view_item' => __('Ver item do indicador'),
+ 		'search_items' => __('Procurar indicador'),
+ 		'not_found' => __('Nenhum indicador encontrado'),
+ 		'not_found_in_trash' => __('Nenhum indicador encontrado na lixeira'),
+ 		'parent_item_colon' => ''
+ 	);
+ 	$args   = array(
+ 		'labels' => $labels,
+ 		'public' => true,
+ 		'publicly_queryable' => true,
+ 		'show_ui' => true,
+ 		'query_var' => true,
+ 		'menu_icon' => 'dashicons-chart-pie',
+ 		'rewrite' => array(
+ 						'slug' => 'indicadores',
+ 						'with_front' => false
+ 		),
+ 		'capability_type' => 'post',
+ 		'hierarchical' => false,
+ 		'menu_position' => 6,
+ 		'taxonomies' => array(
+ 						'post_tag'
+ 		),
+ 		'supports' => array(
+ 						'title',
+ 						'revisions'
+ 		)
+ );
+ 	register_post_type('indicadores-ibgh', $args);
+ 	flush_rewrite_rules();
+ }
+ add_action("admin_init", "campos_personalizados_indicadores_ibgh");
+ function campos_personalizados_indicadores_ibgh() {
+ 	add_meta_box("indicador_hma", "Indicadores HMA", "indicador_hma", "indicadores-ibgh", "normal", "low");
+ }
+ function indicador_hma()
+ {
+ 	global $post;
+ 	$custom                = get_post_meta($post->ID);
+ 	$label_indicador_hma_1 = $custom["label_indicador_hma_1"][0];
+ 	$value_indicador_hma_1 = $custom["value_indicador_hma_1"][0];
+ 	$label_indicador_hma_2 = $custom["label_indicador_hma_2"][0];
+ 	$value_indicador_hma_2 = $custom["value_indicador_hma_2"][0];
+ 	$label_indicador_hma_3 = $custom["label_indicador_hma_3"][0];
+ 	$value_indicador_hma_3 = $custom["value_indicador_hma_3"][0];
+ 	$label_indicador_hma_4 = $custom["label_indicador_hma_4"][0];
+ 	$value_indicador_hma_4 = $custom["value_indicador_hma_4"][0];
+ 	$label_indicador_hma_5 = $custom["label_indicador_hma_5"][0];
+ 	$value_indicador_hma_5 = $custom["value_indicador_hma_5"][0];
+ 	$label_indicador_hma_6 = $custom["label_indicador_hma_6"][0];
+ 	$value_indicador_hma_6 = $custom["value_indicador_hma_6"][0];
+ 	$data_acumulado_hma    = $custom["data_acumulado_hma"][0];
+ 	$frase_hma             = $custom["frase_hma"][0];
+ ?>
+ 	<label>Informe o label HMA 1</label>
+ 	<input type="text" name="label_indicador_hma_1" value="<?php echo $label_indicador_hma_1;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 1</label>
+ 	<input type="text" name="value_indicador_hma_1" value="<?php echo $value_indicador_hma_1;
+ ?>" />
+ 	<br />
+ 	<label>Informe o label HMA 2</label>
+ 	<input type="text" name="label_indicador_hma_2" value="<?php echo $label_indicador_hma_2;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 2</label>
+ 	<input type="text" name="value_indicador_hma_2" value="<?php echo $value_indicador_hma_2;
+ ?>" />
+ 	<br />
+ 	<label>Informe o label HMA 3</label>
+ 	<input type="text" name="label_indicador_hma_3" value="<?php echo $label_indicador_hma_3;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 3</label>
+ 	<input type="text" name="value_indicador_hma_3" value="<?php echo $value_indicador_hma_3;
+ ?>" />
+ 	<br />
+ 	<label>Informe o label HMA 4</label>
+ 	<input type="text" name="label_indicador_hma_4" value="<?php echo $label_indicador_hma_4;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 4</label>
+ 	<input type="text" name="value_indicador_hma_4" value="<?php echo $value_indicador_hma_4;
+ ?>" />
+ 	<br />
+ 	<label>Informe o label HMA 5</label>
+ 	<input type="text" name="label_indicador_hma_5" value="<?php echo $label_indicador_hma_5;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 5</label>
+ 	<input type="text" name="value_indicador_hma_5" value="<?php echo $value_indicador_hma_5;
+ ?>" />
+ 	<br />
+ 	<label>Informe o label HMA 6</label>
+ 	<input type="text" name="label_indicador_hma_6" value="<?php echo $label_indicador_hma_6;
+ ?>" />
+ 	<label>Informe o conteúdo HMA 6</label>
+ 	<input type="text" name="value_indicador_hma_6" value="<?php echo $value_indicador_hma_6;
+ ?>" />
+ 	<br /><br />
+ 	<label>Informe o período acumulado</label>
+ 	<input type="text" name="data_acumulado_hma" value="<?php echo $data_acumulado_hma;
+ ?>" />
+ 	<br />
+ 	<label>Informe o frase principal</label>
+ 	<input type="text" name="frase_hma" value="<?php echo $frase_hma;
+ ?>" />
+ 	<?php
+ }
+ add_action('save_post_indicadores-ibgh', 'save_details_post_indicadores_ibgh');
+ function save_details_post_indicadores_ibgh() {
+ 	global $post;
+     update_post_meta($post->ID, "label_indicador_hma_1", $_POST["label_indicador_hma_1"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_1", $_POST["value_indicador_hma_1"]);
+ 	update_post_meta($post->ID, "label_indicador_hma_2", $_POST["label_indicador_hma_2"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_2", $_POST["value_indicador_hma_2"]);
+ 	update_post_meta($post->ID, "label_indicador_hma_3", $_POST["label_indicador_hma_3"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_3", $_POST["value_indicador_hma_3"]);
+ 	update_post_meta($post->ID, "label_indicador_hma_4", $_POST["label_indicador_hma_4"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_4", $_POST["value_indicador_hma_4"]);
+ 	update_post_meta($post->ID, "label_indicador_hma_5", $_POST["label_indicador_hma_5"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_5", $_POST["value_indicador_hma_5"]);
+ 	update_post_meta($post->ID, "label_indicador_hma_6", $_POST["label_indicador_hma_6"]);
+ 	update_post_meta($post->ID, "value_indicador_hma_6", $_POST["value_indicador_hma_6"]);
+ 	update_post_meta($post->ID, "data_acumulado_hma", $_POST["data_acumulado_hma"]);
+ 	update_post_meta($post->ID, "frase_hma", $_POST["frase_hma"]);
+ }
+ // End CPT indicadores
+
  // Start CPT Corpo Clínico
  add_action('init', 'corpo_clinico_heelj_register');
  function corpo_clinico_heelj_register() {
@@ -80,101 +216,101 @@
  // Start CPT Serviços
  add_action('init', 'servicos_heelj');
  function servicos_heelj() {
- 	$labels = array(
- 		'name' => __('Serviços', 'Tipo de post para incluir os serviços.'),
- 		'singular_name' => __('serviços', 'post type singular name'),
- 		'all_items' => __('Todos os serviços'),
- 		'add_new' => _x('Novo serviço', 'Novo serviço'),
- 		'add_new_item' => __('Add novo serviço'),
- 		'edit_item' => __('Editar serviço'),
- 		'new_item' => __('Novo serviço Item'),
- 		'view_item' => __('Ver item do serviço'),
- 		'search_items' => __('Procurar serviço'),
- 		'not_found' => __('Nenhum serviço encontrado'),
- 		'not_found_in_trash' => __('Nenhum serviço encontrado na lixeira'),
- 		'parent_item_colon' => ''
- 	);
- 	$args   = array(
- 		'labels' => $labels,
- 		'public' => true,
- 		'publicly_queryable' => true,
- 		'show_ui' => true,
- 		'query_var' => true,
- 		'menu_icon' => 'dashicons-admin-generic',
- 		'rewrite' => array(
- 			'slug' => 'servicos%',
- 			'with_front' => false
- 		),
- 		'capability_type' => 'post',
- 		'hierarchical' => false,
- 		'menu_position' => 6,
- 		'taxonomies' => array(
- 			'post_tag'
- 		),
- 		'supports' => array(
- 			'title',
- 			'thumbnail',
- 			'editor',
- 			'excerpt',
- 			'revisions'
- 		)
- 	);
- 	register_post_type('servicos-heelj', $args);
- 	flush_rewrite_rules();
+   $labels = array(
+       'name' => __('Serviços', 'Tipo de post para incluir os serviços.'),
+       'singular_name' => __('serviços', 'post type singular name'),
+       'all_items' => __('Todos os serviços'),
+       'add_new' => _x('Novo serviço', 'Novo serviço'),
+       'add_new_item' => __('Add novo serviço'),
+       'edit_item' => __('Editar serviço'),
+       'new_item' => __('Novo serviço Item'),
+       'view_item' => __('Ver item do serviço'),
+       'search_items' => __('Procurar serviço'),
+       'not_found' => __('Nenhum serviço encontrado'),
+       'not_found_in_trash' => __('Nenhum serviço encontrado na lixeira'),
+       'parent_item_colon' => ''
+   );
+   $args   = array(
+       'labels' => $labels,
+       'public' => true,
+       'publicly_queryable' => true,
+       'show_ui' => true,
+       'query_var' => true,
+       'menu_icon' => 'dashicons-admin-generic',
+       'rewrite' => array(
+           'slug' => 'servicos%',
+           'with_front' => false
+       ),
+       'capability_type' => 'post',
+       'hierarchical' => false,
+       'menu_position' => 6,
+       'taxonomies' => array(
+           'post_tag'
+       ),
+       'supports' => array(
+           'title',
+           'thumbnail',
+           'editor',
+           'excerpt',
+           'revisions'
+       )
+   );
+   register_post_type('servicos-heelj', $args);
+   flush_rewrite_rules();
  }
  add_action("admin_init", "campos_personalizados_servicos_heelj");
  function campos_personalizados_servicos_heelj() {
- 	add_meta_box("botao_servico_heelj", "Informe label para o bot&atilde;o", "botao_servico_heelj", "servicos-heelj", "normal", "low");
- 	add_meta_box("link_botao_servico_heelj", "Informe o link para o bot&atilde;o", "link_botao_servico_heelj", "servicos-heelj", "normal", "low");
- 	add_meta_box("info_servico_heelj", "Informe o texto de informa&ccedil;&atilde;o", "info_servico_heelj", "servicos-heelj", "normal", "low");
- 	add_meta_box("link_info_servico_heelj", "Informe o link para que leva a informa&ccedil;&atilde;o", "link_info_servico_heelj", "servicos-heelj", "normal", "low");
+   add_meta_box("botao_servico_heelj", "Informe label para o bot&atilde;o", "botao_servico_heelj", "servicos-heelj", "normal", "low");
+   add_meta_box("link_botao_servico_heelj", "Informe o link para o bot&atilde;o", "link_botao_servico_heelj", "servicos-heelj", "normal", "low");
+   add_meta_box("info_servico_heelj", "Informe o texto de informa&ccedil;&atilde;o", "info_servico_heelj", "servicos-heelj", "normal", "low");
+   add_meta_box("link_info_servico_heelj", "Informe o link para que leva a informa&ccedil;&atilde;o", "link_info_servico_heelj", "servicos-heelj", "normal", "low");
  }
  function botao_servico_heelj() {
- 	global $post;
- 	$custom              = get_post_meta($post->ID);
- 	$botao_servico_heelj = $custom["botao_servico_heelj"][0];
+   global $post;
+   $custom              = get_post_meta($post->ID);
+   $botao_servico_heelj = $custom["botao_servico_heelj"][0];
  ?>
- 	<input type="text" name="botao_servico_heelj" value="<?php echo $botao_servico_heelj;
- 	?>" />
- 	<?php
+   <input type="text" name="botao_servico_heelj" value="<?php echo $botao_servico_heelj;
+   ?>" />
+   <?php
  }
  function link_botao_servico_heelj() {
- 	global $post;
- 	$custom                   = get_post_meta($post->ID);
- 	$link_botao_servico_heelj = $custom["link_botao_servico_heelj"][0];
+   global $post;
+   $custom                   = get_post_meta($post->ID);
+   $link_botao_servico_heelj = $custom["link_botao_servico_heelj"][0];
  ?>
- 	<input type="text" name="link_botao_servico_heelj" value="<?php echo $link_botao_servico_heelj;
- 	?>" />
- 	<?php
+   <input type="text" name="link_botao_servico_heelj" value="<?php echo $link_botao_servico_heelj;
+   ?>" />
+   <?php
  }
  function info_servico_heelj()
  {
- 	global $post;
- 	$custom             = get_post_meta($post->ID);
- 	$info_servico_heelj = $custom["info_servico_heelj"][0];
+   global $post;
+   $custom             = get_post_meta($post->ID);
+   $info_servico_heelj = $custom["info_servico_heelj"][0];
  ?>
- 	<input type="text" name="info_servico_heelj" value="<?php echo $info_servico_heelj;
- 	?>" />
- 	<?php
+   <input type="text" name="info_servico_heelj" value="<?php echo $info_servico_heelj;
+   ?>" />
+   <?php
  }
  function link_info_servico_heelj()
  {
- 	global $post;
- 	$custom                  = get_post_meta($post->ID);
- 	$link_info_servico_heelj = $custom["link_info_servico_heelj"][0];
+   global $post;
+   $custom                  = get_post_meta($post->ID);
+   $link_info_servico_heelj = $custom["link_info_servico_heelj"][0];
  ?>
- 	<input type="text" name="link_info_servico_heelj" value="<?php echo $link_info_servico_heelj;
+   <input type="text" name="link_info_servico_heelj" value="<?php echo $link_info_servico_heelj;
  ?>" />
- 	<?php
+   <?php
  }
  add_action('save_post_servicos-heelj', 'save_details_post_servicos_heelj');
  function save_details_post_servicos_heelj()
  {
- 	global $post;
- 	update_post_meta($post->ID, "botao_servico_heelj", $_POST["botao_servico_heelj"]);
- 	update_post_meta($post->ID, "link_botao_servico_heelj", $_POST["link_botao_servico_heelj"]);
- 	update_post_meta($post->ID, "info_servico_heelj", $_POST["info_servico_heelj"]);
- 	update_post_meta($post->ID, "link_info_servico_heelj", $_POST["link_info_servico_heelj"]);
+   global $post;
+   update_post_meta($post->ID, "botao_servico_heelj", $_POST["botao_servico_heelj"]);
+   update_post_meta($post->ID, "link_botao_servico_heelj", $_POST["link_botao_servico_heelj"]);
+   update_post_meta($post->ID, "info_servico_heelj", $_POST["info_servico_heelj"]);
+   update_post_meta($post->ID, "link_info_servico_heelj", $_POST["link_info_servico_heelj"]);
  }
  // End CPT Serviços
 
