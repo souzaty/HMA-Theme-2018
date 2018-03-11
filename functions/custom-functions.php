@@ -2,7 +2,7 @@
 /** HMA Theme Functions
  * @package WordPress
  * @subpackage HMA
- * @since HMA
+ * @since HMA 1.0
  */
 
 add_filter('wp_nav_menu_items', 'add_search_box_to_menu_heelj', 10, 2);
