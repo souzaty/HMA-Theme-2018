@@ -1,5 +1,5 @@
 <?php
-/* Template Name: CORPO CLINICO HEELJ */
+/* Template Name: Corpo Clínico */
 /**
 * @package WordPress
 * @subpackage HMA
