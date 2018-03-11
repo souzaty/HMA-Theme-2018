@@ -552,21 +552,21 @@ function trabalhe_custom_columns($column)
 add_action('init', 'transparencia_register');
 function transparencia_register()
 {
-				$eventos_permalink = 'transparencia';
-				$labels            = array(
-								'name' => __('Prestação de contass', 'Tipo de post para incluir Prestação de contass.'),
-								'singular_name' => __('Prestação de conta', 'post type singular name'),
-								'all_items' => __('Todas Prestações de Contas'),
-								'add_new' => _x('Nova Prestação de conta', 'Nova Prestação de conta'),
-								'add_new_item' => __('Adicionar nova Prestação de conta'),
-								'edit_item' => __('Editar Prestação de conta'),
-								'new_item' => __('Nova Prestação de conta Item'),
-								'view_item' => __('Ver item da Prestação de conta'),
-								'search_items' => __('Procurar Prestação de conta'),
-								'not_found' => __('Nenhuma Prestação de conta encontrada'),
-								'not_found_in_trash' => __('Nenhuma Prestação de conta encontrada na lixeira'),
-								'parent_item_colon' => ''
-				);
+                $eventos_permalink = 'transparencia';
+                $labels            = array(
+                                'name' => __('Transparência', 'Tipo de post para incluir Prestação de contas na área transparência.'),
+                                'singular_name' => __('Transparência', 'post type singular name'),
+                                'all_items' => __('Todos os Documentos'),
+                                'add_new' => _x('Novo Documento', 'Novo Documento'),
+                                'add_new_item' => __('Adicionar novo documento em Transparência'),
+                                'edit_item' => __('Editar documento de Transparência'),
+                                'new_item' => __('Novo Item em Transparência'),
+                                'view_item' => __('Ver item'),
+                                'search_items' => __('Procurar Documento'),
+                                'not_found' => __('Nenhum documento encontrado em Transparência'),
+                                'not_found_in_trash' => __('Nenhuma documento de transparência encontrado na lixeira'),
+                                'parent_item_colon' => ''
+                );
 				$args              = array(
 								'labels' => $labels,
 								'public' => true,
