@@ -1,5 +1,10 @@
 <?php
-   /* Template Name: SEARCH */
+/* Template Name: SEARCH */
+/**
+* @package WordPress
+* @subpackage HMA
+* @since HMA 1.0
+*/
 ?>
 <?php
    global $post;

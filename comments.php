@@ -1,10 +1,9 @@
 <?php
 /**
- * @package WordPress
- * @subpackage HEELJ
- * @since HEELJ 1.0
- */
-
+* @package WordPress
+* @subpackage HMA
+* @since HMA 1.0
+*/
 ?>
 
 <div id="comments" class="comments-area">

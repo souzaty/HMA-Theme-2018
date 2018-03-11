@@ -1,10 +1,10 @@
 <?php
-	/**
-	 * @package WordPress
-	 * @subpackage HMA
-	 * @since HMA 1.0 Beta
-	*/
-	?>
+/**
+ * @package WordPress
+ * @subpackage HMA
+ * @since HMA 1.0 Beta
+*/
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
