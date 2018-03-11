@@ -9,8 +9,8 @@
  add_action('init', 'indicadores_ibgh');
  function indicadores_ibgh() {
  	$labels = array(
- 		'name' => __('Indicadores IBGH', 'Tipo de post para incluir os indicadores.'),
- 		'singular_name' => __('Indicadores IBGH', 'post type singular name'),
+ 		'name' => __('Indicadores', 'Tipo de post para incluir os indicadores.'),
+ 		'singular_name' => __('Indicadores', 'post type singular name'),
  		'all_items' => __('Indicadores'),
  		'add_new' => _x('Novo indicador', 'Novo indicador'),
  		'add_new_item' => __('Add novo indicador'),
